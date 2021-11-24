@@ -1,0 +1,5 @@
+_dist
+bin
+vendor
+releases
+.cover
