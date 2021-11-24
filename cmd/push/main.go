@@ -85,7 +85,7 @@ func newPushCmd(args []string) (*cobra.Command, error) {
 	f.StringVarP(&p.certFile, "cert-file", "", "", "Identify HTTPS client using this SSL certificate file [$HELM_REPO_CERT_FILE]")
 	f.StringVarP(&p.keyFile, "key-file", "", "", "Identify HTTPS client using this SSL key file [$HELM_REPO_KEY_FILE]")
 	f.BoolVarP(&p.insecureSkipVerify, "insecure", "", false, "Connect to server with an insecure way by skipping certificate verification [$HELM_REPO_INSECURE]")
-	f.BoolVarP(&p.skipReindex, "skip-reindex", "", false, "Avoid trigger reindex in the repository after pushing the chart [$HELM_REPO_SKIP_REINDEX]")
+	f.BoolVarP(&p.skipReindex, "skip-reindex", "", true, "Avoid trigger reindex in the repository after pushing the chart [$HELM_REPO_SKIP_REINDEX]")
 	f.Parse(args)
 	return cmd, nil
 }
