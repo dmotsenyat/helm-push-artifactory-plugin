@@ -118,7 +118,7 @@ func (p *pushCmd) setFieldsFromEnv() {
 	if v, ok := os.LookupEnv("HELM_REPO_INSECURE"); ok {
 		p.insecureSkipVerify, _ = strconv.ParseBool(v)
 	}
-	if v, ok := os.LookupEnv("HELM_REPO_SKIP_REINDEX"); ok {
+	if v, ok := os.LookupEnv("HELM_REPO_SKIP_REINDEX"); ok && p.skipReindex == true {
 		p.skipReindex, _ = strconv.ParseBool(v)
 	}
 }
