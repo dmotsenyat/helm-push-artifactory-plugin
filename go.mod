@@ -1,4 +1,4 @@
-module github.com/belitre/helm-push-artifactory-plugin
+module github.com/dmotsenyat/helm-push-artifactory-plugin
 
 go 1.14
 

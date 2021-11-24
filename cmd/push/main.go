@@ -12,10 +12,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/belitre/helm-push-artifactory-plugin/pkg/artifactory"
-	"github.com/belitre/helm-push-artifactory-plugin/pkg/helm"
-	helmrepo "github.com/belitre/helm-push-artifactory-plugin/pkg/repo"
-	"github.com/belitre/helm-push-artifactory-plugin/pkg/version"
+	"github.com/dmotsenyat/helm-push-artifactory-plugin/pkg/artifactory"
+	"github.com/dmotsenyat/helm-push-artifactory-plugin/pkg/helm"
+	helmrepo "github.com/dmotsenyat/helm-push-artifactory-plugin/pkg/repo"
+	"github.com/dmotsenyat/helm-push-artifactory-plugin/pkg/version"
 	"github.com/spf13/cobra"
 )
 
@@ -118,7 +118,7 @@ func (p *pushCmd) setFieldsFromEnv() {
 	if v, ok := os.LookupEnv("HELM_REPO_INSECURE"); ok {
 		p.insecureSkipVerify, _ = strconv.ParseBool(v)
 	}
-	if v, ok := os.LookupEnv("HELM_REPO_SKIP_REINDEX"); ok && p.skipReindex == true {
+	if v, ok := os.LookupEnv("HELM_REPO_SKIP_REINDEX"); ok {
 		p.skipReindex, _ = strconv.ParseBool(v)
 	}
 }

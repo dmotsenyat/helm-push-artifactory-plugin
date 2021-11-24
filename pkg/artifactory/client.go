@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/belitre/helm-push-artifactory-plugin/pkg/tlsutil"
+	"github.com/dmotsenyat/helm-push-artifactory-plugin/pkg/tlsutil"
 )
 
 type (
